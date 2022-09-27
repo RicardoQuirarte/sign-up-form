@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'odin-font';
+    src: url(fonts/bungee-spice-regular.ttf);
+}
+
+img {
+    width: 40vw;
+    height: 100vh;
+}
+
+.odin {
+    font-family: odin-font;
+    font-size: 35px;
+}
+
+footer {
+    font-size: 15px;
+}
