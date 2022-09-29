@@ -28,26 +28,34 @@
                 <p id="lets-do-text">Let's do this!</p>
                 <p id="fields-marked-text">Fields marked with an asterisk (*) are required</p>
                 <form action="">
-                    <div class="full-name">
-                        <label for="fisrt-name">First name</label>
-                        <input type="text" name="fisrt-name" id="fisrt-name">
-                        <label for="last-name">Last name</label>
-                        <input type="text" name="last-name" id="last-name">
-                    </div>
-                    <div class="extra-info">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                        <label for="phone-number">Phone number</label>
-                        <input type="tel" name="phone-number" id="">
-                    </div>
-                    <div class="password">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
-                        <label for="confirm-password">Confirm password</label>
-                        <input type="password" name="confirm-password" id="confirm-password">
+                    <div class="inputs-area">
+                        <div class="inputs">
+                            <label for="fisrt-name">First name*</label>
+                            <input type="text" name="fisrt-name" id="fisrt-name" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="last-name">Last name</label>
+                            <input type="text" name="last-name" id="last-name">
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email*</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="phone-number">Phone number</label>
+                            <input type="tel" name="phone-number" id="">
+                        </div>
+                        <div class="inputs">
+                            <label for="password">Password*</label>
+                            <input type="password" name="password" id="password" required>
+                        </div>
+                        <div class="inputs">
+                            <label for="confirm-password">Confirm password*</label>
+                            <input type="password" name="confirm-password" id="confirm-password" required>
+                        </div>
                     </div>
             </div>
-                    <div class="confirm-area">
+                    <div class="button-area">
                         <button>Create account</button>
                         <p id="log-in-text">Already have an account? <a href="">Log in</a></p>
                     </div>

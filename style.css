@@ -74,9 +74,45 @@ p {
     padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 20px;
+    font-size: 18px;
+    font-family: 'Antonio', sans-serif;
 }
 
-.confirm-area {
+.inputs-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 25vw);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+label {
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+}
+
+input {
+    width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button-area {
     margin-top: 5vh;
     padding-left: 40px;
 }
@@ -84,7 +120,7 @@ p {
 #log-in-text {
     font-size: 17px;
     font-weight: 500;
-    margin-top: 1vh;
+    margin-top: 2vh;
 }
 
 #you-know-text {
@@ -102,15 +138,28 @@ p {
     color: grey;
 }
 
-p > a {
-    color: green;
-}
-
 button {
-    width: 300px;
+    width: 250px;
     height: 70px;
     border-radius: 20px;
-    background-color: rgb(46, 204, 113);
+    background: rgba(120, 177, 51, 0.8);
+    color: rgb(242, 244, 244);
     font-size: 25px;
     font-family: 'Antonio', sans-serif;
+    box-shadow: 0 4px black;
+    border: solid 2px black;
+}
+
+button:hover {
+    background-color: rgba(120, 177 ,51 , 1);
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(5px);
+    box-shadow: 0 0px black;
+}
+
+p > a {
+    color: green;
 }
