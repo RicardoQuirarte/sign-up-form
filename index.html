@@ -9,10 +9,49 @@
         <title>Sig-up Rich</title>
     </head>
     <body>
-        <img src="images/senuscape.jpg" alt="background-image">
-        <span class="odin">Odin</span>
-
-
-        <footer>Photo by SenuScape on Pexels</footer>
+        <div class="legend-image">
+            <img src="images/senuscape.jpg" alt="train-image">
+            <div class="logo">
+                <img src="images/odin-lined.png" alt="odin-logo">
+                <span class="odin">Odin</span>
+            </div>
+            <footer>Photo by <a href="https://www.pexels.com/es-es/@senuscape-728360/" target="_blank">SenuScape</a>
+                on <a href="https://www.pexels.com/es-es/" target="_blank">Pexels</a></footer>
+        </div>
+        <div class="form-area">
+            <div class="header-text">
+                <p>This is not a real online service! You know you need something like this in your life
+                    to help you realize your deepest dreams. Sig up now to get started.</p>
+                <p id="you-know-text">You know you want to.</p>
+            </div>
+            <div class="form">
+                <p id="lets-do-text">Let's do this!</p>
+                <p id="fields-marked-text">Fields marked with an asterisk (*) are required</p>
+                <form action="">
+                    <div class="full-name">
+                        <label for="fisrt-name">First name</label>
+                        <input type="text" name="fisrt-name" id="fisrt-name">
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name">
+                    </div>
+                    <div class="extra-info">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                        <label for="phone-number">Phone number</label>
+                        <input type="tel" name="phone-number" id="">
+                    </div>
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" name="confirm-password" id="confirm-password">
+                    </div>
+            </div>
+                    <div class="confirm-area">
+                        <button>Create account</button>
+                        <p id="log-in-text">Already have an account? <a href="">Log in</a></p>
+                    </div>
+                </form>
+        </div>
     </body>
 </html>
