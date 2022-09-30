@@ -62,13 +62,13 @@ p {
 }
 
 .header-text {
-    margin-top: 10vh;
+    margin-top: 7vh;
     padding-left: 40px;
     padding-right: 40px;
 }
 
 .form {
-    margin-top: 10vh;
+    margin-top: 7vh;
     background-color: white;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -90,13 +90,35 @@ p {
 }
 
 label {
-    margin-bottom: 1vh;
     margin-top: 2vh;
+    margin-bottom: 1vh;
 }
 
 input {
-    width: 250px;
+    width: 20vw;
+    height: 3vh;
+    border-radius: 5px;
 }
+
+input:hover {
+    background: rgb(242, 244, 244, 0.5);
+}
+
+input:focus {
+    outline: none;
+    border: solid 1px #E5E7EB;
+}
+
+input:focus:valid {
+    outline: none;
+    border: solid 2px rgba(120, 177, 51, 0.8);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+
 
 
 
