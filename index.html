@@ -13,7 +13,7 @@
             <img src="images/senuscape.jpg" alt="train-image">
             <div class="logo">
                 <img src="images/odin-lined.png" alt="odin-logo">
-                <span class="odin">Odin</span>
+                <p class="odin">Odin</p>
             </div>
             <footer>Photo by <a href="https://www.pexels.com/es-es/@senuscape-728360/" target="_blank">SenuScape</a>
                 on <a href="https://www.pexels.com/es-es/" target="_blank">Pexels</a></footer>
@@ -47,16 +47,18 @@
                         </div>
                         <div class="inputs">
                             <label for="password">Password*</label>
-                            <input type="password" name="password" id="password" required placeholder=" ">
+                            <input type="password" name="password" id="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            <span class="txtPassword"></span>
                         </div>
                         <div class="inputs">
                             <label for="confirm-password">Confirm password*</label>
-                            <input type="password" name="confirm-password" id="confirm-password" required placeholder=" ">
+                            <input type="password" name="confirm-password" id="confirm-password" required placeholder=" " class="confirmPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            <span class="txtConfirmPassword"></span>
                         </div>
                     </div>
             </div>
                     <div class="button-area">
-                        <button>Create account</button>
+                        <button class="submit">Create account</button>
                         <p id="log-in-text">Already have an account? <a href="">Log in</a></p>
                     </div>
                 </form>
