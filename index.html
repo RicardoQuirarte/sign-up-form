@@ -13,7 +13,7 @@
             <img src="images/senuscape.jpg" alt="train-image">
             <div class="logo">
                 <img src="images/odin-lined.png" alt="odin-logo">
-                <p class="odin">Odin</p>
+                <span class="odin">Odin</span>
             </div>
             <footer>Photo by <a href="https://www.pexels.com/es-es/@senuscape-728360/" target="_blank">SenuScape</a>
                 on <a href="https://www.pexels.com/es-es/" target="_blank">Pexels</a></footer>
@@ -48,12 +48,16 @@
                         <div class="inputs">
                             <label for="password">Password*</label>
                             <input type="password" name="password" id="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                            <span class="txtPassword"></span>
+                            <div id="pwdRequirements">
+                                <p id="length">Password must contain at least 8 characters</p>
+                                <p id="number">One number</p>
+                                <p id="capital">One capital letter</p>
+                            </div>
                         </div>
                         <div class="inputs">
                             <label for="confirm-password">Confirm password*</label>
                             <input type="password" name="confirm-password" id="confirm-password" required placeholder=" " class="confirmPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                            <span class="txtConfirmPassword"></span>
+                            <p class="txtConfirmPwd"></p>
                         </div>
                     </div>
             </div>

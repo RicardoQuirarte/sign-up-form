@@ -1,31 +1,58 @@
 const button = document.querySelector('.submit');
 const password = document.querySelector('#password');
 const confirmPassword = document.querySelector('.confirmPassword');
-const txtPassword = document.querySelector('.txtPassword');
-const txtConfirmPassword = document.querySelector('.txtConfirmPassword');
+const pwdRequirements = document.querySelector('.pwdRequirements');
+const pwdRequirementsArea = document.querySelector('#pwdRequirements');
+const txtConfirmPwd = document.querySelector('.txtConfirmPwd');
+const length = document.querySelector('#length');
+const number = document.querySelector('#number');
+const capital = document.querySelector('#capital');
 
-password.addEventListener('focus', () => {
-    txtPassword.textContent = 'Password must contain at least 8 characters, one number, one capital letter';
-})
+function show () {
+    pwdRequirementsArea.style.visibility = 'visible';
+}
 
-password.addEventListener('keyup', checkPassword);
+function hide () {
+    pwdRequirementsArea.style.visibility = 'hidden'
+}
+
+password.addEventListener('focus', show)
+password.addEventListener('blur', hide)
+confirmPassword.addEventListener('focus', show)
+confirmPassword.addEventListener('blur', hide)
 
 function checkPassword () {
-    const upperCaseLetter = /[A-Z]/g;
-    const number = /[0-9]/g;
+    const numbers = /[0-9]/g;
+    if (password.value.match(numbers)) {
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+    } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+    } 
 
-    if (password.value.length >= 8 && password.value.match(upperCaseLetter) && password.value.match(number)) {
-        txtPassword.textContent = 'Password have at least 8 characters, one number and one capital letter';
-        txtPassword.style.color = 'green';
+    const upperCaseLetter = /[A-Z]/g;
+    if (password.value.match(upperCaseLetter)) {
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+    } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
     }
-    else {
-        txtPassword.textContent = 'Password must contain at least 8 characters, one number, one capital letter';    
-        txtPassword.style.color = 'red';
+    
+    if (password.value.length >= 8) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+    } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
     }
 }
 
+password.addEventListener('keyup', checkPassword);
+
 button.addEventListener('click', () => {
     if (password.value !== confirmPassword.value) {
-        txtConfirmPassword.textContent = 'Password didn\'t match, try again';
+        txtConfirmPwd.textContent = 'Password didn\'t match, try again';
     }
 })
